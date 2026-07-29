@@ -1,0 +1,58 @@
+### AUTH ROUTES
+
+### GET /
+GET http://localhost:3000
+
+### POST /auth/register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username":"kkkttttttt@gmail.com",
+    "password":"ttttttttttttt"
+}
+
+### POST /auth/login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username":"kkkttttttt@gmail.com",
+    "password":"ttttttttttttt"
+}
+
+### Fetch All todos GET /TODOS (protected)
+
+GET http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg1MTc0MDM0LCJleHAiOjE3ODUyNjA0MzR9.5GtcCxrJ3_0yv1gCnLRbKHbxDp5jG5DwDSKoYy9hvTA
+
+### Creates a new todos POST /TODOS 
+
+POST http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg1MTc0MDM0LCJleHAiOjE3ODUyNjA0MzR9.5GtcCxrJ3_0yv1gCnLRbKHbxDp5jG5DwDSKoYy9hvTA
+Content-Type: application/json
+
+{
+    "task":"At the end of the project"
+}
+
+
+##Path parameter → /todos/2
+##Query parameter → ?page=4
+
+
+### UPDATE A TODO PUT /TODO/ID (protected route)
+PUT http://localhost:3000/todos/2?page=4 
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg1MTc0MDM0LCJleHAiOjE3ODUyNjA0MzR9.5GtcCxrJ3_0yv1gCnLRbKHbxDp5jG5DwDSKoYy9hvTA
+Content-Type: application/json
+
+{
+    "completed":2
+}
+
+### DELETE A TODO PUT /TODO/ID (protected route)
+DELETE  http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzg1MTc0MDM0LCJleHAiOjE3ODUyNjA0MzR9.5GtcCxrJ3_0yv1gCnLRbKHbxDp5jG5DwDSKoYy9hvTA
+
+
+
